@@ -1,0 +1,142 @@
+body{
+    background-color: black;
+    font-family: Arial;
+    font-size: 1vw;
+    color: whitesmoke;
+    text-align: center;
+    vertical-align: middle;
+}
+#logo{
+    text-align: center;
+    padding: 2%;
+}
+#c3 {
+    float:left;
+    width:100%;
+    overflow:hidden;
+    position:relative;
+    display: flex;
+}
+#c2 {
+    float:left;
+    width:100%;
+    position:relative;
+    right:30%;
+    display: flex;
+}
+#c1 {
+    float:left;
+    width:100%;
+    position:relative;
+    right:40%;
+    display: flex;
+}
+.left {
+    float:left;
+    width:26%;
+    position:relative;
+    left:72%;
+    overflow:hidden;
+    border-color: grey;
+    border-style: solid;
+    border-radius: 5px;
+}
+.middle {
+    float:left;
+    width:36%;
+    position:relative;
+    left:76%;
+    overflow:hidden;
+    border-color: grey;
+    border-style: solid;
+    border-radius: 5px;
+}
+.right {
+    float:left;
+    width:26%;
+    position:relative;
+    left:80%;
+    overflow:hidden;
+    border-color: grey;
+    border-style: solid;
+    border-radius: 5px;
+}
+input,select{
+    background-color: #b9efc4;
+    color: black;
+    border-radius: 4px;
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 1vw;
+}
+input{
+    width: 7vw;
+}
+button{
+    background-color: #b9efc4;
+    display: block;
+    color: black;
+    border-radius: 4px;
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 1.5vw;
+    align-items: center;
+}
+#b5,#b10,#b11,#b7,#b8,#b2{
+    background-color: #2e2e2e;
+    color: whitesmoke;
+    font-size: 1vw;
+}
+label{
+    color: #b9efc4;
+}
+#table1,#table2{
+    padding: 1vw;
+    margin: auto;
+    align-items: center;
+    text-align: center;
+    vertical-align: middle;
+}
+tr,td{
+    vertical-align: top;
+    align-items: center;
+    text-align: center;
+    padding: 3px;
+}
+#instrucoes{
+    text-align: justify;
+    padding: 5%;
+}
+#autenticacao,#configuracao,#instrucoes,#classificacao,#b6,#b7,#b8,#autent{
+    display: none;
+}
+
+.tabuleiro{
+    opacity: 80%;
+    width: 30vw;
+    height: 30vw;
+    background: #b9efc4;
+    line-height: 0.25vw;
+    margin: auto;
+}
+.celula{
+    background: #59A064;
+    cursor: pointer;
+    display: inline-block;
+    float: left;
+    text-align: center;
+    width: 11.5%;
+    height: 11.5%;
+    margin: 0.5%;
+}
+.disco{
+    height: 90%;
+    width: 90%;
+    margin: auto;
+    border-radius: 100px;
+}
+.piece{
+    margin: auto;
+}

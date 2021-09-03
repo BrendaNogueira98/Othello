@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <title> Othello </title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="othello2.css">
+    <script src="othello2.js"></script>
+    <script src="othello2_1.js"></script>
+</head>
+
+<body>
+    <div id="logo">
+        <img class="logo1" alt="Othello" src="logo1.png">
+    </div>
+    <div id="c3">
+        <div id="c2">
+            <div id="c1">
+                <div class="left">
+                    <br>
+                    <button id="b4" onclick="showHide('autenticacao')"> Autenticação </button>
+                    <div id="autenticacao">
+                        <label for="nick"> Utilizador: </label>
+                        <input type="text" id="nick">
+                        <br>
+                        <label for="password"> Senha: </label>
+                        <input type="password" id="pass">
+                        <br>
+                        <button id='b5' onclick="register()"> Registar </button>
+                    </div>
+                    <div id='registado'></div>
+                    <br>
+                    <button id="b9" onclick="showHide('classificacao')"> Classificações </button>
+                    <div id="classificacao">
+                        <table id="table1">
+                            <tr>
+                                <td>
+                                    <button id="b10" onclick="local()"> Local </button>
+                                    <div id='local'>
+                                        <br>
+                                        <div id="vitorias"></div>
+                                        <div id="derrotas"></div>
+                                        <div id="empates"></div>
+                                        <br>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button id="b11" onclick="ranking()"> Servidor </button>
+                                    <div id="ranking">
+                                        <table id="table2">
+                                        </table>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <br>
+                </div>
+                <div class="middle">
+                    <br>
+                    <button id="b1" onclick="showHide('configuracao')"> Configuração </button>
+                    <div id='configuracao'>
+                        <div id="selecionar">
+                            <label for="oponente"> Oponente: </label>
+                            <select id="oponente" name="oponente" onchange="showDiv(this)">
+                                <option selected value="computador"> Computador </option>
+                                <option value="jogador"> Outro Jogador </option>
+                            </select>
+                            <br>
+                        </div>
+                        <div id="autent"> Não se esqueça de autenticar para poder jogar. </div>
+                        <div id='outras'>
+                            <label for="dificuldade"> Dificuldade: </label>
+                            <select id="dificuldade">
+                                <option value="facil"> Fácil </option>
+                                <option value="dificil"> Difícil </option>
+                            </select>
+                            <br>
+                            <label for="cor"> Cor: </label>
+                            <select id="cor">
+                                <option value="branco"> Branco </option>
+                                <option value="preto"> Preto </option>
+                            </select>
+                            <br>
+                        </div>
+                    </div>
+                    <button id="b2" onclick="iniciar()"> Jogar </button>
+                    <br>
+                    <div id="tabuleiro"></div>
+                    <br>
+                </div>
+                <div class="right">
+                    <br>
+                    <button id="b3" onclick="showHide('instrucoes')"> Instruções </button>
+                    <div id="instrucoes">
+                        <p> O jogo inicia-se com 4 peças posicionadas
+                            no centro do tabuleiro (2 brancas e 2 pretas). O primeiro
+                            movimento é do jogador com as peças pretas. </p>
+                        <p> Para que uma peça seja colocada numa casa do
+                            tabuleiro, é preciso que haja pelo menos uma linha reta
+                            (horizontal, vertical ou diagonal) sem espaços vazios entre a
+                            posição que o jogador deseja e uma outra peça da sua cor, e que
+                            haja uma ou mais peças do oponente entre elas. </p>
+                        <p> Assim que um jogador faz uma jogada válida, todas as peças
+                            do oponente que estejam em uma linha reta entre a peça
+                            recém-colocada e qualquer outra peça do jogador que fez o
+                            movimento, são viradas e passam a ser da cor deste jogador. </p>
+                        <p> O jogo termina quando não for possível virar mais nenhuma peça
+                            (por exemplo, quando todas as casas estiverem
+                            ocupadas ou todas as peças do tabuleiro estiverem com a
+                            mesma cor virada para cima). </p>
+                        <p> Se um jogador possuir mais peças que o adversário,
+                            ele vence. Se ambos tiverem o mesmo número de peças, o
+                            jogo termina em empate. </p>
+                    </div>
+                    <br>
+                    <button id="b6" onclick="showHide('estado')"> Estado do Jogo </button>
+                    <div id="gameinfo"></div>
+                    <div id="estado">
+                        <div id="estadocor"></div>
+                        <div id="estadobrancos"></div>
+                        <div id="estadopretos"></div>
+                        <div id="estadolivres"></div>
+                    </div>
+                    <button id="b8"> Passar jogada </button>
+                    <button id="b7"> Terminar jogo </button>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <footer>
+        <p> &copy; Brenda Nogueira & Ana Torres </p>
+    </footer>
+</body>
+
+</html>
